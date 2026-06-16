@@ -39,6 +39,10 @@ deal simulate   run simulations registered in deal.sims.toml
 deal evidence   capture and manage verification evidence
 ```
 
+This includes the **behavioral surface** — actions and state machines
+(succession flows, decisions, fork/join, loops, send/accept/assign, transitions,
+entry/do/exit) parse, type-check, format, and emit as OMG-schema-valid SysML v2.
+
 ## Repositories
 
 | Repository | What it is | License |
@@ -50,7 +54,12 @@ deal evidence   capture and manage verification evidence
 
 ## Status
 
-**Milestone v2.1.0 — roughly 70% complete** (7 of 10 phases substantively done). The parser, semantic analyzer, formatter, IR, SysML v2 / ReqIF backends, project and dependency tooling, and the simulation-evidence pipeline are implemented. In progress: the `calc` / `constraint` grammar. Next up: the editor-first platform — a desktop editor, import pipelines, and documentation generation.
+The parser, semantic analyzer, formatter, IR, SysML v2 / ReqIF backends, the
+`calc` / `constraint` surface, project and dependency tooling, and the
+simulation-evidence pipeline are implemented and gated by the test suite. The
+**behavioral surface** (actions + state machines) is complete through SysML v2
+emission. Next up: the editor-first platform — a desktop editor, import
+pipelines, and documentation generation.
 
 DEAL is pre-release and built from source today (Zig 0.16 + Rust). See the [installation guide](https://deal-lang.org/getting-started/installation/) to get going.
 
